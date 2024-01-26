@@ -1,0 +1,27 @@
+VUE + FLASK tutorial
+https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/
+
+RUN FLASK SERVER:
+flask run --port=5000 --debug
+
+
+
+
+
+Here are a few additional considerations:
+
+Serial Port Permission:
+
+Ensure that the user running the Flask server on the Raspberry Pi has the necessary permissions to access the serial port. You might need to add the user to the dialout group.
+
+bash
+Copy code
+sudo usermod -aG dialout <your_username>
+Replace <your_username> with your actual username.
+
+Serial Port Identification:
+
+Double-check the serial port identifier on the Raspberry Pi. It's typically something like /dev/ttyUSB0 or /dev/ttyACM0, depending on the type of Arduino and how it's connected.
+Baudrate Matching:
+
+Ensure that the baudrate used in the Flask server matches the one set in your Arduino code. Consistent baudrates are crucial for reliable communication.
